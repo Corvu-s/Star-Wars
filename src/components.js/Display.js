@@ -12,7 +12,18 @@ function Display(props) {
       </div>
     );
   } else if (props.place) {
-    return <p>Place</p>;
+    return (
+      <div>
+        <p>You have chosen {props.planetName}</p>
+        <p>
+          {props.planetName}'s climate is {props.climate}
+        </p>
+        <p>Diameter: {props.diameter} Km</p>
+        <p>Gravity: {props.gravity}</p>
+        <p>Population: {props.population} People</p>
+        <p>Terrain type: {props.terrain}</p>
+      </div>
+    );
   } else if (props.thing) {
     return <p>thing</p>;
   } else {
