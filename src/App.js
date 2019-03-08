@@ -9,8 +9,7 @@ class App extends Component {
     ship: false,
     number: undefined,
     submit: undefined,
-    age: undefined,
-    person: undefined
+    age: undefined
   };
   //https://swapi.co/api/films/2/
   getData = async event => {
@@ -19,16 +18,18 @@ class App extends Component {
     const number = event.target.elements.number.value;
     const api_call = await fetch(`https://swapi.co/api/${thing}/${number}/`);
     const data = await api_call.json();
-    if (thing.equals("people")) {
+    console.log(data);
+    if (thing === "people") {
       this.setState({
         type: thing,
         age: data.birth_year,
+        name: data.name,
         person: true,
         planet: false,
         ship: false
       });
-    } else if (thing.equals("planets")) {
-    } else if (thing.equals("starships ")) {
+    } else if (thing === "planets") {
+    } else if (thing === "starships") {
     }
   };
 
@@ -37,7 +38,7 @@ class App extends Component {
       <div>
         <Title />
         <Form getData={this.getData} />
-        <Display data={} />
+        <Display name={this.state.name} type={this.state.type} />
       </div>
     );
   }

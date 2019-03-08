@@ -1,6 +1,7 @@
 import React from "react";
 
-const Display = props => {
-  <h1>Display</h1>;
-};
+function Display(props) {
+  return <p> You have chosen {props.type}</p>;
+}
+
 export default Display;
