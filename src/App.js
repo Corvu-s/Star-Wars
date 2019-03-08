@@ -50,6 +50,7 @@ class App extends Component {
         height: data.height,
         gender: data.gender,
         mass: data.mass,
+        number: number,
         person: true,
         planet: false,
         ship: false
@@ -57,6 +58,7 @@ class App extends Component {
     } else if (thing === "planets") {
       this.setState({
         type: thing,
+        number: number,
         planetName: data.name,
         climate: data.climate,
         diameter: data.diameter,
@@ -70,8 +72,9 @@ class App extends Component {
     } else if (thing === "starships") {
       this.setState({
         shipName: data.name,
+        number: number,
         cargoCapacity: data.cargo_capacity,
-        food: data.comsumables,
+        food: data.consumables,
         cost: data.cost_in_credits,
         crew: data.crew,
         drive: data.hyperdrive_rating,
@@ -91,6 +94,7 @@ class App extends Component {
         <Title />
         <Form getData={this.getData} />
         <Display
+          number={this.state.number}
           person={this.state.person}
           place={this.state.planet}
           thing={this.state.ship}
@@ -117,7 +121,7 @@ class App extends Component {
           drive={this.state.drive}
           manufacturer={this.state.manufacturer}
           model={this.state.model}
-          length={this.state.model}
+          length={this.state.length}
         />
       </div>
     );
