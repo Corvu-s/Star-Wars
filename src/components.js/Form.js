@@ -1,24 +1,20 @@
 import React from "react";
+import { Form, FormGroup, Input, Button } from "reactstrap";
 
-const Form = props => {
+const Forms = props => {
   return (
-    <form onSubmit={props.getData}>
-      <label>
-        People:
-        <input type="radio" name="text" value="people" />
-      </label>
-      <label>
-        Planets:
-        <input type="radio" name="text" value="planets" />
-      </label>
-      <label>
-        Starships:
-        <input type="radio" name="text" value="starships" />
-      </label>
+    <Form onSubmit={props.getData}>
+      <FormGroup>
+        <Input type="select" id="thing">
+          <option value="people"> People</option>
+          <option value="planets">Planets</option>
+          <option value="starships">Starships</option>
+        </Input>
+      </FormGroup>
       <input type="number" name="number" placeholder="id" />
-      <button> Submit</button>
-    </form>
+      <Button> Submit</Button>
+    </Form>
   );
 };
 
-export default Form;
+export default Forms;

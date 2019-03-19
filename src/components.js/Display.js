@@ -1,17 +1,16 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
 
 function Display(props) {
   if (props.person) {
     if (props.number < 87) {
       return (
-        <Container>
+        <div>
           <p>You have chosen {props.name}. </p>
           <p>Age: {props.age}. </p>
           <p>Gender: {props.gender}</p>
           <p>Height: {props.height} Cm</p>
           <p>Mass: {props.mass} Kg</p>
-        </Container>
+        </div>
       );
     } else {
       return <p>This id number is out of bounds. 87 is the max</p>;
