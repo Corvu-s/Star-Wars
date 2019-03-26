@@ -2,3 +2,9 @@ h1 {
   padding: 50px;
   background-color: grey;
 }
+.total {
+  color: rgba(248, 80, 50, 1);
+}
+.p {
+  color: blue;
+}

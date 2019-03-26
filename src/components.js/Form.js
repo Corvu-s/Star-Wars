@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, FormGroup, Input, Button } from "reactstrap";
+import styles from "./styles.css";
 
 const Forms = props => {
   return (

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Title from "./components.js/Title";
 import Forms from "./components.js/Form";
 import Display from "./components.js/Display";
+import styles from "./components.js/styles.css";
+
 import { Row, Col, Container } from "reactstrap";
 class App extends Component {
   state = {
