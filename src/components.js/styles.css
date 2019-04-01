@@ -1,10 +1,19 @@
 h1 {
-  padding: 50px;
-  background-color: grey;
-}
-.total {
-  color: rgba(248, 80, 50, 1);
+  color: dimgray;
 }
 .p {
-  color: blue;
+  color: dimgrey;
+  align-self: center;
+}
+.thing {
+  background: lavender;
+  width: 450px;
+  height: 55;
+  border-radius: 20px;
+}
+.back {
+  background: lavender;
+  width: 1000px;
+  height: 500;
+  border-radius: 20px;
 }

@@ -3,8 +3,8 @@ import Title from "./components.js/Title";
 import Forms from "./components.js/Form";
 import Display from "./components.js/Display";
 import styles from "./components.js/styles.css";
-
 import { Row, Col, Container } from "reactstrap";
+
 class App extends Component {
   state = {
     person: false,
@@ -92,48 +92,51 @@ class App extends Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col xs="6">
-            <Title />
-            <Forms getData={this.getData} />
-          </Col>
-          <Col xs="6">
-            <Display
-              number={this.state.number}
-              person={this.state.person}
-              place={this.state.planet}
-              thing={this.state.ship}
-              type={this.state.type}
-              //////////////////////
-              name={this.state.name}
-              age={this.state.age}
-              height={this.state.height}
-              gender={this.state.gender}
-              mass={this.state.mass}
-              ////////////////////
-              planetName={this.state.planetName}
-              climate={this.state.climate}
-              diameter={this.state.diameter}
-              gravity={this.state.gravity}
-              population={this.state.population}
-              terrain={this.state.terrain}
-              ////////////////////
-              shipName={this.state.shipName}
-              cargoCapacity={this.state.cargoCapacity}
-              food={this.state.food}
-              cost={this.state.cost}
-              crew={this.state.crew}
-              drive={this.state.drive}
-              manufacturer={this.state.manufacturer}
-              model={this.state.model}
-              length={this.state.length}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div className={"back"}>
+        <Container>
+          <Row>
+            <Col xs="6">
+              <Title />
+              <Row>
+                <Forms getData={this.getData} />
+              </Row>
+            </Col>
+            <Col xs="6">
+              <Display
+                number={this.state.number}
+                person={this.state.person}
+                place={this.state.planet}
+                thing={this.state.ship}
+                type={this.state.type}
+                //////////////////////
+                name={this.state.name}
+                age={this.state.age}
+                height={this.state.height}
+                gender={this.state.gender}
+                mass={this.state.mass}
+                ////////////////////
+                planetName={this.state.planetName}
+                climate={this.state.climate}
+                diameter={this.state.diameter}
+                gravity={this.state.gravity}
+                population={this.state.population}
+                terrain={this.state.terrain}
+                ////////////////////
+                shipName={this.state.shipName}
+                cargoCapacity={this.state.cargoCapacity}
+                food={this.state.food}
+                cost={this.state.cost}
+                crew={this.state.crew}
+                drive={this.state.drive}
+                manufacturer={this.state.manufacturer}
+                model={this.state.model}
+                length={this.state.length}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
-
 export default App;

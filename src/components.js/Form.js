@@ -1,5 +1,7 @@
 import React from "react";
 import { Form, FormGroup, Input, Button } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
+
 import styles from "./styles.css";
 
 const Forms = props => {
@@ -12,7 +14,9 @@ const Forms = props => {
           <option value="starships">Starships</option>
         </Input>
       </FormGroup>
-      <input type="number" name="number" placeholder="id" />
+      <FormGroup>
+        <input type="number" name="number" placeholder="id" />
+      </FormGroup>
       <Button> Submit</Button>
     </Form>
   );
